@@ -1,4 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group "io.techinject.draglistview"
+version "1.6.3-x"
+project.archivesBaseName = 'draglistview'
 
 android {
     compileSdkVersion 28
@@ -8,7 +13,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName version
     }
     buildTypes {
         release {
@@ -32,4 +37,16 @@ dependencies {
     testImplementation 'com.squareup.assertj:assertj-android:1.0.0'
 }
 
-apply from: 'maven-publish.gradle'
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+task classesJar(type: Jar) {
+    from "$buildDir/intermediates/classes/release"
+}
+
+artifacts {
+    archives classesJar
+    archives sourcesJar
+}
