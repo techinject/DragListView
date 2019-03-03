@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group "com.github.techinject"
-version "1.6.3-x"
+version "1.6.3-x-3"
 project.archivesBaseName = 'DragListView'
 
 android {
