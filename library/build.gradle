@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group "com.github.techinject"
-version "1.6.3-x-3"
+version "1.6.3-x-4"
 project.archivesBaseName = 'DragListView'
 
 android {
@@ -43,7 +43,7 @@ task sourcesJar(type: Jar) {
 }
 
 task classesJar(type: Jar) {
-    from "$buildDir/intermediates/classes/release"
+    from "$buildDir/intermediates/javac/release/compileReleaseJavaWithJavac/classes"
 }
 
 artifacts {
