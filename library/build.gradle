@@ -1,9 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group "io.techinject.draglistview"
+group "com.github.techinject"
 version "1.6.3-x"
-project.archivesBaseName = 'draglistview'
+project.archivesBaseName = 'DragListView'
 
 android {
     compileSdkVersion 28
