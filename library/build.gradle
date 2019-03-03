@@ -42,11 +42,6 @@ task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.sourceFiles
 }
 
-task classesJar(type: Jar) {
-    from "$buildDir/intermediates/javac/release/compileReleaseJavaWithJavac/classes"
-}
-
 artifacts {
-    archives classesJar
     archives sourcesJar
 }
